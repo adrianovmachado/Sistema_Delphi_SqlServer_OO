@@ -12,6 +12,8 @@ object FrmPrincipal: TFrmPrincipal
   Font.Style = []
   Menu = MainPrincipal
   OldCreateOrder = False
+  Position = poScreenCenter
+  WindowState = wsMaximized
   PixelsPerInch = 96
   TextHeight = 13
   object MainPrincipal: TMainMenu
@@ -34,8 +36,9 @@ object FrmPrincipal: TFrmPrincipal
       object N2: TMenuItem
         Caption = '-'
       end
-      object Fechar1: TMenuItem
+      object mnuFechar: TMenuItem
         Caption = 'Fechar'
+        OnClick = mnuFecharClick
       end
     end
     object Movimentao1: TMenuItem

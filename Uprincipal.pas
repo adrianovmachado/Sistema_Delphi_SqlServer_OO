@@ -17,12 +17,13 @@ type
     Categoria1: TMenuItem;
     Produtos1: TMenuItem;
     N2: TMenuItem;
-    Fechar1: TMenuItem;
+    mnuFechar: TMenuItem;
     Vendas1: TMenuItem;
     Clientes2: TMenuItem;
     N3: TMenuItem;
     Produtos2: TMenuItem;
     VendasporData1: TMenuItem;
+    procedure mnuFecharClick(Sender: TObject);
   private
     { Private declarations }
   public
@@ -35,5 +36,11 @@ var
 implementation
 
 {$R *.dfm}
+
+procedure TFrmPrincipal.mnuFecharClick(Sender: TObject);
+begin
+  //Close;
+  application.Terminate;
+end;
 
 end.
