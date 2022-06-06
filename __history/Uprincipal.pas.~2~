@@ -1,0 +1,24 @@
+unit Uprincipal;
+
+interface
+
+uses
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs;
+
+type
+  TFrmPrimcipal = class(TForm)
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  FrmPrimcipal: TFrmPrimcipal;
+
+implementation
+
+{$R *.dfm}
+
+end.
