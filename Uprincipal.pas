@@ -4,7 +4,7 @@ interface
 
 uses
   Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
-  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.Menus;
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.Menus,UdtmConexao;
 
 type
   TFrmPrincipal = class(TForm)
@@ -23,11 +23,13 @@ type
     N3: TMenuItem;
     Produtos2: TMenuItem;
     VendasporData1: TMenuItem;
+    procedure FormCreate(Sender: TObject);
     procedure mnuFecharClick(Sender: TObject);
+
   private
     { Private declarations }
   public
-    { Public declarations }
+    { Public sdeclarations }
   end;
 
 var
@@ -37,10 +39,26 @@ implementation
 
 {$R *.dfm}
 
+
+
+procedure TFrmPrincipal.FormCreate(Sender: TObject);
+begin
+  DtmPrincipal := TdtmPrincipal.Create(Self);
+  with DtmPrincipal.ConexaoDb do
+  begin
+    SqlHourGlass:= true;
+    Protocol := 'mssql';
+    LibraryLocation := 'dtmPrincipal.ConexaoDb.';
+    HostName := '.\SQLEXPRESS';
+    Port := 1433;
+    User := 'sa';
+    Password := '123';
+    Connected := True;
+  end;
+end;
 procedure TFrmPrincipal.mnuFecharClick(Sender: TObject);
 begin
-  //Close;
-  application.Terminate;
+  Application.Terminate;
 end;
 
 end.

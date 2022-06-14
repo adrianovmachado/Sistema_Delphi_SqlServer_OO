@@ -1,0 +1,16 @@
+program Vendas;
+
+uses
+  Vcl.Forms,
+  Uprincipal in 'Uprincipal.pas' {FrmPrincipal},
+  UdtmConexao in 'DataModule\UdtmConexao.pas' {DtmConexao: TDataModule};
+
+{$R *.res}
+
+begin
+  Application.Initialize;
+  Application.MainFormOnTaskbar := True;
+  Application.CreateForm(TFrmPrincipal, FrmPrincipal);
+  Application.CreateForm(TDtmConexao, DtmConexao);
+  Application.Run;
+end.

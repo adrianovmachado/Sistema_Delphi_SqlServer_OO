@@ -1,0 +1,17 @@
+object DtmConexao: TDtmConexao
+  OldCreateOrder = False
+  Height = 150
+  Width = 591
+  object Conexao: TZConnection
+    ControlsCodePage = cCP_UTF16
+    Catalog = ''
+    HostName = '.\SQLEXPRESS01'
+    Port = 0
+    Database = 'Vendas'
+    User = 'sa'
+    Password = ''
+    Protocol = 'mssql'
+    Left = 32
+    Top = 8
+  end
+end
