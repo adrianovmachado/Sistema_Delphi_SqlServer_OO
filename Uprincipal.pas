@@ -43,7 +43,7 @@ implementation
 
 procedure TFrmPrincipal.FormCreate(Sender: TObject);
 begin
-  DtmPrincipal := TdtmPrincipal.Create(Self);
+  DtmPrincipal:= TdtmPrincipal.Create(Self);
   with DtmPrincipal.ConexaoDb do
   begin
     SqlHourGlass:= true;
